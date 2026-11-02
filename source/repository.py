@@ -6,13 +6,13 @@ from .exceptions import DataStorageError
 
 def load_employees():
     """
-    Load employee records from the JSON file.
+    Load employee records from the JSON file
 
     Returns:
-        list: List of employee records.
+        list: List of employee records
 
     Raises:
-        DataStorageError: If the JSON data is invalid or the file cannot be read.
+        DataStorageError: If the JSON data is invalid or the file cannot be read
     """
     try:
         with open(DATA_FILE, "r", encoding="utf-8") as file:
@@ -34,13 +34,15 @@ def load_employees():
 
 def save_employees(employees):
     """
-    Save employee records to the JSON file.
+    Save employee records to the JSON file
 
     Args:
-        employees (list): List of employee records.
-
+        employees (list): List of employee records
+    
+    Returns:
+            None   
     Raises:
-        DataStorageError: If employee data cannot be saved.
+        DataStorageError: If employee data cannot be saved
     """
     try:
         with open(DATA_FILE, "w", encoding="utf-8") as file:
@@ -52,13 +54,14 @@ def save_employees(employees):
 
 def insert_employee(employee):
     """
-    Insert a new employee into the existing records.
+    Insert a new employee into the existing records
 
     Args:
-        employee (dict): Employee details to be inserted.
-
+        employee (dict): Employee details to be inserted
+    Returns:
+           None
     Raises:
-        DataStorageError: If employee records cannot be saved.
+        DataStorageError: If employee records cannot be saved
     """
     employees = load_employees()
     employees.append(employee)
