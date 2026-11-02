@@ -16,5 +16,14 @@
         "joining_date": "2003-10-23",
         "status": "Active",
         "employee_id": "107a75b3-eaa6-4eef-98e6-b8c2377c4827"
+    },
+    {
+        "name": "suresh",
+        "email": "suresh123@gmail.com",
+        "department": "IT",
+        "salary": 23000.0,
+        "joining_date": "2022-10-22",
+        "status": "Active",
+        "employee_id": "444151e1-8929-43b9-a467-a778179f2640"
     }
 ]

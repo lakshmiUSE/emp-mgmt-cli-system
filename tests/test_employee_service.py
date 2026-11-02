@@ -8,7 +8,7 @@ from source.exceptions import ( DuplicateEmployeeError)
 
 
 def test_add_employee():
-    """Test adding a new employee successfully"""
+   
     employee = {
         "name": "Rajesh",
         "email": "rameh1283@email.com",
@@ -21,7 +21,7 @@ def test_add_employee():
     assert add_employee(employee)
 
 def test_duplicate_email():
-    """Test that duplicate employee emails raise an error"""
+  
     employee = {
         "name": "Rajesh",
         "email": "rajesh9123gmail.com",
