@@ -6,8 +6,7 @@ def display_menu():
     """Display the employee mangement menu"""
     print("\n===== Employee Management System =====")
     print("1. Add Employee")
-  
-
+    print("2. Search Employee")
 
 while True:
  display_menu()
@@ -29,3 +28,7 @@ while True:
         except ValidationError as e:
             print(e)
  
+ elif choice == "2":
+        search = input("Enter employee name: ")
+        result = employee_service.search_employees(search)
+        print(result)
