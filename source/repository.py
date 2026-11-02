@@ -7,7 +7,9 @@ from .exceptions import DataStorageError
 def load_employees():
     """
     Load employee records from the JSON file
-
+    
+    Args:
+         None
     Returns:
         list: List of employee records
 

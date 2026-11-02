@@ -5,7 +5,7 @@ from source.employee_service import (
 )
 
 from source.exceptions import ( DuplicateEmployeeError)
-
+from source import  employee_service
 
 def test_add_employee():
    
@@ -35,3 +35,12 @@ def test_duplicate_email():
 
     with pytest.raises(DuplicateEmployeeError):
         add_employee(employee)
+
+def test_search_employee():
+    result = employee_service.search_employees("Rajesh")
+    assert result != "Employee not found"
+
+
+def test_search_employee_not_found():
+    result = employee_service.search_employees("Unknown")
+    assert result == "Employee not found"
